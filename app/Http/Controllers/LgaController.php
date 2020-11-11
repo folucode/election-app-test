@@ -9,17 +9,17 @@ class LgaController extends Controller
 {
     public function getResults($id = 1)
     {
-        $lga = Lga::find($id);
+        $LGA = Lga::find($id);
         $lgas = Lga::all();
 
         $parties_score = [];
 
         $message = '';
 
-        if ($lga === null) {
+        if ($LGA === null) {
             $message = "No result for this LGA";
         } else {
-            foreach ($lga->getPollingUnits as $pollingUnit) {
+            foreach ($LGA->getPollingUnits as $pollingUnit) {
 
                 foreach ($pollingUnit->getResult as $result) {
 
@@ -41,6 +41,6 @@ class LgaController extends Controller
             $message = "No result for this LGA";
         }
 
-        return view('lga_results', compact(['scores', 'lgas', 'lga', 'message']));
+        return view('lga_results', compact(['scores', 'lgas', 'LGA', 'message']));
     }
 }

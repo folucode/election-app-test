@@ -20,13 +20,13 @@
                 <ul class="list-group">
                     @foreach ($lgas as $lga)
                         <li class="list-group-item"><a
-                                href="/results/lgas/{{ $lga->uniqueid }}">{{ $lga->lga_name }}</a>
+                                href="/results/lgas/{{ $lga->lga_id }}">{{ $lga->lga_name }}</a>
                         </li>
                     @endforeach
                 </ul>
             </div>
             <div class="col-md-8">
-                <h4>Results for {{ $lga->lga_name }}</h4>
+                <h4>Results for {{ $LGA->lga_name }} LGA</h4>
                 <br>
                 <table class="table">
                     <thead>
