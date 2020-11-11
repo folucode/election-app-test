@@ -12,11 +12,15 @@ use Faker\Generator as Faker;
 
 class PollingUnitController extends Controller
 {
-    public function getResults($id)
+
+    public function getResults($id = 8)
     {
         $results = PollingUnit::find($id);
+        $polling_units = PollingUnit::all();
 
-        return ['State' => $results->getLga->getState->state_name, 'Polling Unit' => $results->polling_unit_name, 'Result' => $results->getResult];
+         ['State' => $results->getLga->getState->state_name, 'Polling Unit' => $results->polling_unit_name, 'Result' => $results->getResult];
+
+        return view('polling_units_results', compact(['results', 'polling_units']));
     }
 
     public function newPollingUnitView()

@@ -17,10 +17,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/pu-results', 'PollingUnitController@getResults');
-
 Route::get('/lga-results', 'LgaController@getResults');
 
 Route::get('/polling-unit/new', 'PollingUnitController@newPollingUnitView');
 
 Route::post('/pollingunit/new', 'PollingUnitController@addNewPollingUnit');
+
+Route::get('/results/polling-unit/{unit_id?}', 'PollingUnitController@getResults');
