@@ -19,7 +19,7 @@ Route::get('/', function () {
 
 Route::get('/polling-unit/new', 'PollingUnitController@newPollingUnitView');
 
-Route::post('/pollingunit/new', 'PollingUnitController@addNewPollingUnit');
+Route::post('/polling-unit/new', 'PollingUnitController@addNewPollingUnit');
 
 Route::get('/results/polling-unit/{unit_id?}', 'PollingUnitController@getResults');
 

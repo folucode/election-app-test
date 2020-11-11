@@ -28,7 +28,7 @@
               <a class="nav-link" href="/results/lgas">LGAs results</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              <a class="nav-link" href="/polling-unit/new" tabindex="-1" aria-disabled="true">new polling unit</a>
             </li>
           </ul>
         </div>
