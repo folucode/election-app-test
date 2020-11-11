@@ -18,8 +18,6 @@ class PollingUnitController extends Controller
         $results = PollingUnit::find($id);
         $polling_units = PollingUnit::all();
 
-         ['State' => $results->getLga->getState->state_name, 'Polling Unit' => $results->polling_unit_name, 'Result' => $results->getResult];
-
         return view('polling_units_results', compact(['results', 'polling_units']));
     }
 
@@ -50,7 +48,6 @@ class PollingUnitController extends Controller
         $polling_unit->entered_by_user = $request->user_name;
         $polling_unit->date_entered = date("Y/m/d");
         $polling_unit->user_ip_address = $faker->ipv4();
-// dd($polling_unit);
         $polling_unit->save();
 
         return back()->with('message', 'polling unit added');

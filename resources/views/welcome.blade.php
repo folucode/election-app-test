@@ -25,7 +25,7 @@
               <a class="nav-link" href="/results/polling-unit">polling unit results</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#">Pricing</a>
+              <a class="nav-link" href="/results/lga">LGAs results</a>
             </li>
             <li class="nav-item">
               <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
