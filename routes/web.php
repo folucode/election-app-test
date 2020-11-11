@@ -21,6 +21,6 @@ Route::get('/pu-results', 'PollingUnitController@getResults');
 
 Route::get('/lga-results', 'LgaController@getResults');
 
-Route::get('/pollingunit/new', 'PollingUnitController@newPollingUnitView');
+Route::get('/polling-unit/new', 'PollingUnitController@newPollingUnitView');
 
 Route::post('/pollingunit/new', 'PollingUnitController@addNewPollingUnit');
